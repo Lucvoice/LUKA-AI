@@ -17,7 +17,7 @@
   ],
   "website": "https://keithsite.top",
   "repository": "https://github.com/lucvoice/LUKA-AI.git",
-  "logo": "https://files.catbox.moe/hgv5c9.png",
+  "logo": "https://files.catbox.moe/5mmt2y.png",
   "success_url": "/",
   "env": {
     "OWNER_NUMBER": {
@@ -69,7 +69,7 @@
     
     "BOT_PIC": {
       "description": "Bot profile picture URL",
-      "value": "https://files.catbox.moe/1pcqmc.png",
+      "value": "https://files.catbox.moe/5mmt2y.png",
       "required": false
     },
     "BOTNAME": {
