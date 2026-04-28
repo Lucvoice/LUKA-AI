@@ -1,4 +1,4 @@
-pauseign="center">
+
   <a href="https://github.com/lucvoice/LUKA-AI">
     <img alt="LUKA-AI Banner" height="350" src="https://files.catbox.moe/5mmt2y.png">
   </a>
