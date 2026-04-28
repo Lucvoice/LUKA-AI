@@ -48,7 +48,7 @@
     },
     "STATUS_LIKE_EMOJIS": {
       "description": "Emojis to use for liking status (comma-separated)",
-      "value": "💚,🩵,💚",
+      "value": "💚,🩵,💜",
       "required": false
     },
     
