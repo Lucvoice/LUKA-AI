@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/lucvoice/LUKA-AI">
-    <img alt="LUKA-AI Banner" height="350" src="https://files.catbox.moe/1pcqmc.png">
+    <img alt="LUKA-AI Banner" height="350" src="https://files.catbox.moe/hgv5c9.png">
   </a>
 </p>
 
