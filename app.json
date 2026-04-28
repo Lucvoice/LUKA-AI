@@ -72,7 +72,7 @@
       "value": "https://files.catbox.moe/5mmt2y.png",
       "required": false
     },
-    "BOTNAME": {
+    "BOT_NAME": {
       "description": "Bot display name",
       "value": "LUKA-AI",
       "required": false
