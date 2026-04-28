@@ -1,6 +1,6 @@
 
 {
-  "name": "KEITH-MD",
+  "name": "LUKA-AI",
   "description": "This is a simple whatsapp bot built with nodejs to make your WhatsApp enjoyable",
   "keywords": [
     "bot",
@@ -16,8 +16,8 @@
     "md-bot"
   ],
   "website": "https://keithsite.top",
-  "repository": "https://github.com/kkeizzah25/KEITH-MD.git",
-  "logo": "https://i.ibb.co/PsZnb9NH/0d81ac6b1fb1.jpg",
+  "repository": "https://github.com/lucvoice/LUKA-AI.git",
+  "logo": "https://files.catbox.moe/1pcqmc.png",
   "success_url": "/",
   "env": {
     "OWNER_NUMBER": {
@@ -69,12 +69,12 @@
     
     "BOT_PIC": {
       "description": "Bot profile picture URL",
-      "value": "https://i.ibb.co/PsZnb9NH/0d81ac6b1fb1.jpg",
+      "value": "https://files.catbox.moe/1pcqmc.png",
       "required": false
     },
     "BOTNAME": {
       "description": "Bot display name",
-      "value": "KEITH-MD",
+      "value": "LUKA-AI",
       "required": false
     },
     "MODE": {
