@@ -21,7 +21,7 @@
   "success_url": "/",
   "env": {
     "OWNER_NUMBER": {
-      "description": "Bot owner phone number without + or spaces. Example: 254748387615, 254796299159",
+      "description": "Bot owner phone number without + or spaces. Example: 2557",
       "required": false
     },
     "SESSION": {
