@@ -1,4 +1,4 @@
-<p align="center">
+pauseign="center">
   <a href="https://github.com/lucvoice/LUKA-AI">
     <img alt="LUKA-AI Banner" height="350" src="https://files.catbox.moe/5mmt2y.png">
   </a>
@@ -49,5 +49,5 @@
 ---
 
 <a href="https://git.io/typing-svg">
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=14&pause=1000&color=55FFDA&width=435&lines=THANK+YOU+FOR+CHOOSING+LUKA-AI+ENJOY" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=16&pause=1000&color=55FFDA&width=435&lines=THANK+YOU+FOR+CHOOSING+LUKA-AI+ENJOY" alt="Typing SVG" />
 </a>
