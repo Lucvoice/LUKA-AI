@@ -7,7 +7,7 @@ if (fs.existsSync('set.env')) {
 }
 
 const session = process.env.SESSION || '';
-const dev = process.env.OWNER_NUMBER || '254748387615';
+const dev = process.env.OWNER_NUMBER || '255768619068';
 
 const autostatusAutoviewStatus = process.env.AUTOVIEW_STATUS || 'true';
 const autostatusAutoLikeStatus = process.env.AUTOLIKE_STATUS || 'false';
@@ -16,13 +16,13 @@ const autostatusStatusReplyText = process.env.STATUS_REPLY_TEXT || '✅ Status V
 const autostatusStatusLikeEmojis = process.env.STATUS_LIKE_EMOJIS || '💛,❤️,💜,🤍,💙';
 
 const botPrefix = process.env.PREFIX || ".";
-const botAuthor = process.env.AUTHOR || "Keith";
+const botAuthor = process.env.AUTHOR || "Luka";
 const botexpiration = process.env.BOT_EXPIRATION_DATE || "11/03/2027";
-const botUrl = process.env.BOT_PIC || "https://i.ibb.co/PsZnb9NH/0d81ac6b1fb1.jpg";
-const botGurl = process.env.BOT_GURL || "https://github.com/Keithkeizzah/KEITH-MD";
+const botUrl = process.env.BOT_PIC || "https://files.catbox.moe/1pcqmc.png";
+const botGurl = process.env.BOT_GURL || "https://github.com/lucvoice/LUKA-AI";
 const botTimezone = process.env.BOT_TIMEZONE || "Africa/Nairobi";
-const botBotname = process.env.BOTNAME || "KEITH-MD";
-const botPackname = process.env.BOT_PACKNAME || "KEITH-MD";
+const botBotname = process.env.BOTNAME || "LUKA-AI";
+const botPackname = process.env.BOT_PACKNAME || "LUKA-AI";
 const botMode = process.env.BOT_MODE || "public";
 const botSessionName = process.env.BOT_SESSION_NAME || "keith-md";
 
