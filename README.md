@@ -33,7 +33,7 @@
 </p>
 
 </p>
-<h2 align="center">  𝗚𝗘𝗧 𝗦𝗧𝗔𝗥𝗧𝗘𝗗
+<h2 align="center"> DEPLOY TO HEROKU
 </h2>
 <a href="https://heroku.com/deploy?template=https://github.com/lucvoice/LUKA-AI">
     <img alt="Deploy Heroku" src="https://img.shields.io/badge/DEPLOY%20TO%20HEROKU-100000?style=for-the-badge&logo=heroku&logoColor=white&labelColor=7952B3&color=9B59FF"/>
