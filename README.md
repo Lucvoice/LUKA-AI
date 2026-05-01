@@ -33,7 +33,7 @@
 </p>
 
 <p align="center">
-<strong>2. GET SESSION ID</strong>
+<strong>3. 𝗗𝗘𝗣𝗟𝗢𝗬 𝗧𝗢 𝗛𝗘𝗥𝗢𝗞𝗨 </strong>
 <br>
   <a href="https://heroku.com/deploy?template=https://github.com/lucvoice/LUKA-AI">
     <img alt="Deploy Heroku" src="https://img.shields.io/badge/DEPLOY%20TO%20HEROKU-100000?style=for-the-badge&logo=heroku&logoColor=white&labelColor=7952B3&color=9B59FF"/>
