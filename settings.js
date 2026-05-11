@@ -20,11 +20,11 @@ const botAuthor = process.env.AUTHOR || "Luka";
 const botexpiration = process.env.BOT_EXPIRATION_DATE || "11/03/2027";
 const botUrl = process.env.BOT_PIC || "https://files.catbox.moe/5mmt2y.png";
 const botGurl = process.env.BOT_GURL || "https://github.com/lucvoice/LUKA-AI";
-const botTimezone = process.env.BOT_TIMEZONE || "Africa/Nairobi";
+const botTimezone = process.env.BOT_TIMEZONE || "Africa/Dar es salaam";
 const botBotname = process.env.BOTNAME || "LUKA-AI";
 const botPackname = process.env.BOT_PACKNAME || "LUKA-AI";
 const botMode = process.env.BOT_MODE || "public";
-const botSessionName = process.env.BOT_SESSION_NAME || "keith-md";
+const botSessionName = process.env.BOT_SESSION_NAME || "luka-ai";
 
 const { Sequelize } = require('sequelize'); 
 const DATABASE_URL = process.env.DATABASE_URL || './database.db'; 
