@@ -2,9 +2,8 @@
   <a href="https://github.com/TristanCage/LUKA-AI">
     <img alt="LUKA-AI docs" height="350" src="https://files.catbox.moe/5mmt2y.png">
   </a>
-</p><p align="center">
-<a href="https://github.com/TristanCage">
-  <img title="Author" src="https://img.shields.io/badge/LUKA--AI-darkgreen?style=for-the-badge&logo=whatsapp">
+
+---
 </a>
 </p><p align="center">
     <strong>1. FORK REPOSITORY</strong>
