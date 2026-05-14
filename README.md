@@ -37,6 +37,8 @@
     </a>
 
 
+
+---
 <p align="center">
 <strong>LUKA-AI © 2026</strong>
 </p>
