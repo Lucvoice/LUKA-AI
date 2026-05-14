@@ -24,10 +24,6 @@
     <a href="https://dashboard.heroku.com/new?template=https://github.com/TristanCage/LUKA-AI" target="_blank">
         <img alt="Deploy to heroku" src="https://img.shields.io/badge/Let%27s_Go-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=purple&color=purple"/>
     </a>
-</p><p align="center">
-    <strong>4. DOWNLOAD BOT ZIP</strong>
-    <br>
-    <a href="https://codeload.github.com/TristanCage/LUKA-AI/zip/refs/heads/main" target="_blank">
-        <img alt="Download zip" src="https://img.shields.io/badge/Let%27s_Go-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=darkorange&color=darkorange"/>
-    </a>
-</p>
+
+
+
