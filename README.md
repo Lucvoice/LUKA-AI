@@ -4,6 +4,16 @@
   </a>
 
 ---
+
+<h1 align="center"> LUKA-AI </h1>
+
+[![GitHub forks](https://img.shields.io/github/forks/lucvoice/LUKA-AI?style=social)](https://github.com/lucvoice/LUKA-AI/fork)
+[![GitHub stars](https://img.shields.io/github/stars/lucvoice/LUKA-AI?style=social)](https://github.com/lucvoice/LUKA-AI/stargazers)
+[![GitHub followers](https://img.shields.io/github/followers/lucvoice?style=social)](https://github.com/lucvoice?tab=followers)
+[![GitHub watchers](https://img.shields.io/github/watchers/lucvoice/LUKA-AI?style=social)](https://github.com/lucvoice/LUKA-AI/watchers)
+[![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
+
+
 </a>
 </p><p align="center">
     <strong>1. FORK REPOSITORY</strong>
