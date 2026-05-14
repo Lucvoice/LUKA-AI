@@ -36,7 +36,6 @@
         <img alt="Deploy to heroku" src="https://img.shields.io/badge/Let%27s_Go-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=purple&color=purple"/>
     </a>
 
----
 
 <p align="center">
 <strong>LUKA-AI © 2026</strong>
