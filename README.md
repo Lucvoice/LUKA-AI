@@ -1,43 +1,33 @@
-
-  <a href="https://github.com/lucvoice/LUKA-AI">
-    <img alt="LUKA-AI Banner" height="350" src="https://files.catbox.moe/5mmt2y.png">
+<h1 align="center"> 𝐋𝐔𝐊𝐀-𝐀𝐈 </h1><p align="center">
+  <a href="https://github.com/TristanCage/LUKA-AI">
+    <img alt="LUKA-AI docs" height="350" src="https://files.catbox.moe/5mmt2y.png">
   </a>
-</p>
-
-<div align="center">
-
-<h1 align="center"> LUKA-AI </h1>
-
-[![GitHub forks](https://img.shields.io/github/forks/lucvoice/LUKA-AI?style=social)](https://github.com/lucvoice/LUKA-AI/fork)
-[![GitHub stars](https://img.shields.io/github/stars/lucvoice/LUKA-AI?style=social)](https://github.com/lucvoice/LUKA-AI/stargazers)
-[![GitHub followers](https://img.shields.io/github/followers/lucvoice?style=social)](https://github.com/lucvoice?tab=followers)
-[![GitHub watchers](https://img.shields.io/github/watchers/lucvoice/LUKA-AI?style=social)](https://github.com/lucvoice/LUKA-AI/watchers)
-[![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
-
----
-
-<p align="center">
-<strong>1. FORK REPOSITORY</strong>
-<br>
-<a href="https://github.com/lucvoice/LUKA-AI/fork" target="_blank">
-<img alt="Fork Repo" src="https://img.shields.io/badge/FORK%20REPO-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=orange&color=orange"/>
+</p><p align="center">
+<a href="https://github.com/TristanCage">
+  <img title="Author" src="https://img.shields.io/badge/LUKA--AI-darkgreen?style=for-the-badge&logo=whatsapp">
 </a>
+</p><p align="center">
+    <strong>1. FORK REPOSITORY</strong>
+  <br>
+    <a href="https://github.com/TristanCage/LUKA-AI/fork" target="_blank">
+        <img alt="Fork Repo" src="https://img.shields.io/badge/Fork%20Repo-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=darkblue&color=darkblue"/>
+    </a>
+</p><p align="center">
+    <strong>2. GET SESSION ID</strong>
+    <br>
+    <a href="https://www.cypherx.space/" target="_blank">
+        <img alt="WEBSITE" src="https://img.shields.io/badge/Let%27s_Go-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=darkred&color=darkred"/>
+    </a>
+</p><p align="center">
+    <strong>3. DEPLOY TO HEROKU</strong>
+    <br>
+    <a href="https://dashboard.heroku.com/new?template=https://github.com/TristanCage/LUKA-AI" target="_blank">
+        <img alt="Deploy to heroku" src="https://img.shields.io/badge/Let%27s_Go-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=purple&color=purple"/>
+    </a>
+</p><p align="center">
+    <strong>4. DOWNLOAD BOT ZIP</strong>
+    <br>
+    <a href="https://codeload.github.com/TristanCage/LUKA-AI/zip/refs/heads/main" target="_blank">
+        <img alt="Download zip" src="https://img.shields.io/badge/Let%27s_Go-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=darkorange&color=darkorange"/>
+    </a>
 </p>
-
-<p align="center">
-<strong>2. GET SESSION ID</strong>
-<br>
-<a href="https://lukapair-6e0ab2054cc6.herokuapp.com/" target="_blank">
-<img alt="Pair Code" src="https://img.shields.io/badge/PAIR%20CODE-100000?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=green&color=green"/>
-</a>
-</p>
-
-<p align="center">
-<strong>3. 𝗗𝗘𝗣𝗟𝗢𝗬 𝗧𝗢 𝗛𝗘𝗥𝗢𝗞𝗨 </strong>
-<br>
-  <a href="https://lukasite.onrender.com">
-    <img alt="Deploy Heroku" src="https://img.shields.io/badge/DEPLOY%20TO%20HEROKU-100000?style=for-the-badge&logo=heroku&logoColor=white&labelColor=7952B3&color=9B59FF"/>
-  </a>
-</p>
-
----
