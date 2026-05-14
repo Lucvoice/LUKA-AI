@@ -5,7 +5,7 @@
 
 ---
 
-<h1 align="center"> LUKA-AI </h1>
+<h1 align="center"> </h1>
 
 [![GitHub forks](https://img.shields.io/github/forks/lucvoice/LUKA-AI?style=social)](https://github.com/lucvoice/LUKA-AI/fork)
 [![GitHub stars](https://img.shields.io/github/stars/lucvoice/LUKA-AI?style=social)](https://github.com/lucvoice/LUKA-AI/stargazers)
