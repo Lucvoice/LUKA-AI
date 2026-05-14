@@ -16,29 +16,28 @@
 
 ---
 
-<p align="center">
-<strong>1. FORK REPOSITORY</strong>
-<br>
-<a href="https://github.com/lucvoice/LUKA-AI/fork" target="_blank">
-<img alt="Fork Repo" src="https://img.shields.io/badge/FORK%20REPO-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=orange&color=orange"/>
 </a>
-</p>
+</p><p align="center">
+    <strong>1. FORK REPOSITORY</strong>
+  <br>
+    <a href="https://github.com/lucvoice/LUKA-AI/fork" target="_blank">
+        <img alt="Fork Repo" src="https://img.shields.io/badge/Fork%20Repo-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=darkblue&color=darkblue"/>
+    </a>
+</p><p align="center">
+    <strong>2. GET SESSION ID</strong>
+    <br>
+    <a href="https://lukapair-6e0ab2054cc6.herokuapp.com/" target="_blank">
+        <img alt="WEBSITE" src="https://img.shields.io/badge/Let%27s_Go-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=darkred&color=darkred"/>
+    </a>
+</p><p align="center">
+    <strong>3. DEPLOY TO HEROKU</strong>
+    <br>
+    <a href="https://lukasite.onrender.com/" target="_blank">
+        <img alt="Deploy to heroku" src="https://img.shields.io/badge/Let%27s_Go-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=purple&color=purple"/>
+    </a>
 
-<p align="center">
-<strong>2. GET SESSION ID</strong>
-<br>
-<a href="https://lukapair-6e0ab2054cc6.herokuapp.com/" target="_blank">
-<img alt="Pair Code" src="https://img.shields.io/badge/PAIR%20CODE-100000?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=green&color=green"/>
-</a>
-</p>
-
-<p align="center">
-<strong>3. 𝗗𝗘𝗣𝗟𝗢𝗬 𝗧𝗢 𝗛𝗘𝗥𝗢𝗞𝗨 </strong>
-<br>
-  <a href="https://heroku.com/deploy?template=https://github.com/lucvoice/LUKA-AI">
-    <img alt="Deploy Heroku" src="https://img.shields.io/badge/DEPLOY%20TO%20HEROKU-100000?style=for-the-badge&logo=heroku&logoColor=white&labelColor=7952B3&color=9B59FF"/>
-  </a>
-</p>
+  ---
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=16&pause=1000&color=55FFDA&width=435&lines=THANK+YOU+FOR+CHOOSING++LUKA-AI+ENJOY" alt="Typing SVG" /></a>
 
 ---
 
