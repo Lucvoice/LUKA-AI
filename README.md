@@ -33,23 +33,11 @@
 </p>
 
 <p align="center">
-  <strong>3. 𝗗𝗘𝗣𝗟𝗢𝗬 𝗧𝗢 𝗛𝗘𝗥𝗢𝗞𝗨</strong>
-  <br><br>
-
-  <a href="https://heroku.com/deploy?template=https://lukasite.onrender.com">
-    <img alt="Deploy Heroku"
-      src="https://img.shields.io/badge/DEPLOY%20TO%20HEROKU-100000?style=for-the-badge&logo=heroku&logoColor=white&labelColor=7952B3&color=9B59FF"/>
+<strong>3. 𝗗𝗘𝗣𝗟𝗢𝗬 𝗧𝗢 𝗛𝗘𝗥𝗢𝗞𝗨 </strong>
+<br>
+  <a href="https://heroku.com/deploy?template=https://github.com/lucvoice/LUKA-AI">
+    <img alt="Deploy Heroku" src="https://img.shields.io/badge/DEPLOY%20TO%20HEROKU-100000?style=for-the-badge&logo=heroku&logoColor=white&labelColor=7952B3&color=9B59FF"/>
   </a>
 </p>
 
 ---
-
-<p align="center">
-<strong>LUKA-AI © 2026</strong>
-</p>
-
----
-
-<a href="https://git.io/typing-svg">
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=16&pause=1000&color=55FFDA&width=435&lines=THANK+YOU+FOR+CHOOSING+LUKA-AI+ENJOY" alt="Typing SVG" />
-</a>
