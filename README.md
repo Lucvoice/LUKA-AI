@@ -36,9 +36,6 @@
         <img alt="Deploy to heroku" src="https://img.shields.io/badge/Let%27s_Go-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=purple&color=purple"/>
     </a>
 
-  ---
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=16&pause=1000&color=55FFDA&width=435&lines=THANK+YOU+FOR+CHOOSING++LUKA-AI+ENJOY" alt="Typing SVG" /></a>
-
 ---
 
 <p align="center">
