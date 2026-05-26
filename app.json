@@ -65,23 +65,6 @@
       "description": "Bot operation mode (public/private)",
       "value": "public",
       "required": false
-
-    },
-    "AUTO_DOWNLOAD_STATUS": {
-      "description": "Status will be sent to your inbox automatically (type true to activate or false to deactivate)",
-      "value": "false",
-      "required": false
-   },
-    "CHATBOT": {
-      "description": "Enable text chatbot (true/false)",
-      "value": "false",
-      "required": false
-  
-   },
-    "PRESENCE": {
-      "description": "Presence mode: 1=online, 2=typing, 3=recording",
-      "value": "1",
-      "required": false 
     }
   },
   "buildpacks": [
