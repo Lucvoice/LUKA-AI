@@ -17,7 +17,6 @@ const autostatusStatusLikeEmojis = process.env.STATUS_LIKE_EMOJIS || '💛,❤�
 
 const botPrefix = process.env.PREFIX || ".";
 const botAuthor = process.env.AUTHOR || "Luka";
-const botexpiration = process.env.BOT_EXPIRATION_DATE || "11/03/2027";
 const botUrl = process.env.BOT_PIC || "https://files.catbox.moe/5mmt2y.png";
 const botGurl = process.env.BOT_GURL || "https://github.com/lucvoice/LUKA-AI";
 const botTimezone = process.env.BOT_TIMEZONE || "Africa/Dar es salaam";
