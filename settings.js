@@ -24,6 +24,7 @@ const botBotname = process.env.BOTNAME || "LUKA-AI";
 const botPackname = process.env.BOT_PACKNAME || "LUKA-AI";
 const botMode = process.env.BOT_MODE || "public";
 const botSessionName = process.env.BOT_SESSION_NAME || "luka-ai";
+const autosocialdownload = process.env.AUTO_SOCIAL_DOWNLOAD || "false";
 
 const { Sequelize } = require('sequelize'); 
 const DATABASE_URL = process.env.DATABASE_URL || './database.db'; 
