@@ -29,13 +29,6 @@
       "required": true
     },
     
-    
-    "DATABASE_URL": {
-      "description": "insert your database url",
-      "value": "",
-      "required": false
-    },
-    
     "AUTOVIEW_STATUS": {
       "description": "Auto view WhatsApp status (true/false)",
       "value": "true",
