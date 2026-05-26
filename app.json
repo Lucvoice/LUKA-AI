@@ -5,7 +5,7 @@
   "keywords": [
     "bot",
     "whatsapp",
-    "keith",
+    "luka",
     "whatsapp-stickers",
     "anime",
     "whatsapp-bot",
@@ -15,7 +15,7 @@
     "baileys-md",
     "md-bot"
   ],
-  "website": "https://keithsite.top",
+  "website": "https://lukasite.top",
   "repository": "https://github.com/lucvoice/LUKA-AI.git",
   "logo": "https://files.catbox.moe/5mmt2y.png",
   "success_url": "/",
@@ -27,8 +27,7 @@
     "SESSION": {
       "description": "Your WhatsApp session ID",
       "required": true
-    },
-    
+    },  
     "AUTOVIEW_STATUS": {
       "description": "Auto view WhatsApp status (true/false)",
       "value": "true",
@@ -52,8 +51,6 @@
       "required": false
     },
     
-
-    
     "BOT_PIC": {
       "description": "Bot profile picture URL",
       "value": "https://files.catbox.moe/5mmt2y.png",
@@ -68,6 +65,23 @@
       "description": "Bot operation mode (public/private)",
       "value": "public",
       "required": false
+
+    },
+    "AUTO_DOWNLOAD_STATUS": {
+      "description": "Status will be sent to your inbox automatically (type true to activate or false to deactivate)",
+      "value": "false",
+      "required": false
+   },
+    "CHATBOT": {
+      "description": "Enable text chatbot (true/false)",
+      "value": "false",
+      "required": false
+  
+   },
+    "PRESENCE": {
+      "description": "Presence mode: 1=online, 2=typing, 3=recording",
+      "value": "1",
+      "required": false 
     }
   },
   "buildpacks": [
