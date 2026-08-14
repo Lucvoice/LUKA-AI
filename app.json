@@ -15,7 +15,7 @@
     "md-bot"
   ],
   "website": "https://lukasite.top",
-  "repository": "https://github.com/Lucvoice/LUKA-AI.git",
+  "repository": "https://github.com/Lucvoice/LUKA-AI",
   "logo": "https://files.catbox.moe/5mmt2y.png",
   "success_url": "/",
   "env": {
