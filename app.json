@@ -64,7 +64,7 @@
     
     },
     "WHATSAPP_USERNAME": {
-      "description": "add any of your whatsapp username. this help in bot sudo default. example; veske_rs",
+      "description": "add any of your whatsapp username. this help in bot sudo default. example; lucvoice",
       "required": true
     },
     "AUTO_SOCIAL_DOWNLOAD": {
