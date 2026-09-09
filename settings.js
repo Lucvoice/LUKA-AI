@@ -6,7 +6,7 @@ if (fs.existsSync('set.env')) {
 }
 
 const session = process.env.SESSION || '';
-const dev = process.env.OWNER_NUMBER || '254748387615';
+const dev = process.env.OWNER_NUMBER || '255768619068';
 
 // NEW: your WhatsApp username (no "@"), used as a fallback/primary identifier
 // alongside the jid-based dev/sudo system.
