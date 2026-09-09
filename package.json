@@ -1,7 +1,7 @@
 
 {
   "name": "KEITH-MD",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "",
   "main": "index.js",
   "type": "commonjs",
@@ -13,11 +13,7 @@
     "c": "tsc"
   },
   "keywords": [
-    "bot",
-    "Baileys",
-    "keith-Md",
-    "whatsapp",
-    "whatsapp-bot",
+    "keith-md",
     "keithkeizzah"
   ],
   "author": "keithkeizzah",
@@ -28,6 +24,7 @@
     "gifted-btns": "latest",
     "adm-zip": "latest",
     "pdfkit": "latest",
+    "canvas": "*",
     "body-parser": "latest",
     "buffer": "^6.0.3",
     "dotenv": "^16.3.1",
