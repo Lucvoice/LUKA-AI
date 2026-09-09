@@ -23,7 +23,7 @@ const autostatusAutoviewStatus = process.env.AUTOVIEW_STATUS || 'true';
 const autostatusAutoLikeStatus = process.env.AUTOLIKE_STATUS || 'false';
 const autostatusAutoReplyStatus = process.env.AUTOREPLY_STATUS || 'false';
 const autostatusStatusReplyText = process.env.STATUS_REPLY_TEXT || '✅ Status Viewed By Luka Ai';
-const autostatusStatusLikeEmojis = process.env.STATUS_LIKE_EMOJIS || '🫟,🫟';
+const autostatusStatusLikeEmojis = process.env.STATUS_LIKE_EMOJIS || '💚,💜,💙,❤️';
 
 const botPrefix = process.env.PREFIX || ".";
 const botAuthor = process.env.OWNER_NAME || "Keith";
