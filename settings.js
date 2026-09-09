@@ -26,7 +26,7 @@ const autostatusStatusReplyText = process.env.STATUS_REPLY_TEXT || '✅ Status V
 const autostatusStatusLikeEmojis = process.env.STATUS_LIKE_EMOJIS || '💚,💜,💙,❤️';
 
 const botPrefix = process.env.PREFIX || ".";
-const botAuthor = process.env.OWNER_NAME || "Keith";
+const botAuthor = process.env.OWNER_NAME || "Luka";
 const botexpiration = process.env.BOT_EXPIRATION_DATE || "11/03/2028";
 const botUrl = process.env.BOT_PIC || "https://i.ibb.co/PsZnb9NH/0d81ac6b1fb1.jpg";
 const botGurl = process.env.BOT_GURL || "https://github.com/Keithkeizzah/KEITH-MD";
