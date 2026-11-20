@@ -4,7 +4,7 @@
   "keywords": [
     "bot",
     "whatsapp",
-    "keith",
+    "lucvoice",
     "whatsapp-stickers",
     "anime",
     "whatsapp-bot",
@@ -16,7 +16,7 @@
   ],
   "website": "https://lukasite.top",
   "repository": "https://github.com/Lucvoice/LUKA-AI",
-  "logo": "https://files.catbox.moe/5mmt2y.png",
+  "logo": "https://files.catbox.moe/wxfs9s.png",
   "success_url": "/",
   "env": {
     "OWNER_NUMBER": {
@@ -39,7 +39,7 @@
     },
     "STATUS_LIKE_EMOJIS": {
       "description": "Emojis to use for liking status (comma-separated)",
-      "value": "💚,💜,❤️",
+      "value": "💚,💜",
       "required": false
     },
     "PREFIX": {
@@ -54,7 +54,7 @@
     },
     "BOT_PIC": {
       "description": "Bot profile picture URL",
-      "value": "https://files.catbox.moe/5mmt2y.png",
+      "value": "https://files.catbox.moe/wxfs9s.png",
       "required": false
     },
     "BOTNAME": {
@@ -74,7 +74,7 @@
     },
     "OWNER_NAME": {
       "description": "Your bot name",
-      "value": "LUKA-AI",
+      "value": "ʟᴜᴋᴀʙʀᴀɴᴅ",
       "required": false
     },
     "MODE": {
