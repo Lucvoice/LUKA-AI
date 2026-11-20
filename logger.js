@@ -122,7 +122,7 @@ class KeithLogger {
                 }
             }
 
-            console.log(keithPurple.bold(`\t ${BOT_SYMBOL} ${BOT_SYMBOL} ${BOT_SYMBOL} { K E I T H - M D } ${BOT_SYMBOL} ${BOT_SYMBOL} ${BOT_SYMBOL}`));
+            console.log(keithPurple.bold(`\t ${BOT_SYMBOL} ${BOT_SYMBOL} ${BOT_SYMBOL} { LUKA-AI } ${BOT_SYMBOL} ${BOT_SYMBOL} ${BOT_SYMBOL}`));
             console.log(keithGold.bold("╔════════════════════════════╗"));
             
             if (isBroadcast) {
