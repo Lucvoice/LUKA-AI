@@ -53,7 +53,7 @@ async function getAntiDeleteSettings() {
         console.error('Error getting anti-delete settings:', error);
         return { 
             status: true, 
-            notification: ' *Keith antiDelete*',
+            notification: ' *Luka antiDelete*',
             includeGroupInfo: true,
             includeMedia: true
         };
