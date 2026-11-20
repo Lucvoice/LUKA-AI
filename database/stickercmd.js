@@ -1,19 +1,18 @@
 const { DataTypes } = require('sequelize');
 const { database } = require('../settings');
-const fs = require('fs-extra');
-const path = require('path');
 
-// Define sticker commands table
+const DEFAULT_SESSION = 'main';
+
 const StickerCmdDB = database.define('stickercmd', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
-        autoIncrement: true,
+        autoIncrement: true
     },
     session_id: {
         type: DataTypes.STRING,
         allowNull: false,
-        defaultValue: 'main'
+        defaultValue: DEFAULT_SESSION
     },
     sticker_hash: {
         type: DataTypes.STRING,
@@ -44,18 +43,38 @@ const StickerCmdDB = database.define('stickercmd', {
     timestamps: true
 });
 
-// For file-based storage backup (optional)
-const DATA_DIR = path.join(__dirname, '..', 'data', 'sticker-commands');
+const cache = new Map();
+let cacheLoaded = false;
 
-// Ensure data directory exists
-if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
+function bucket(sessionId) {
+    if (!cache.has(sessionId)) cache.set(sessionId, new Map());
+    return cache.get(sessionId);
 }
 
-// Initialize database
+function toEntry(row) {
+    return {
+        hash: row.sticker_hash,
+        command: row.command,
+        setBy: row.set_by,
+        setAt: row.set_at,
+        usageCount: row.usage_count || 0,
+        lastUsed: row.last_used || null
+    };
+}
+
+async function loadCache() {
+    const rows = await StickerCmdDB.findAll();
+    cache.clear();
+    for (const row of rows) {
+        bucket(row.session_id).set(row.sticker_hash, toEntry(row));
+    }
+    cacheLoaded = true;
+}
+
 async function initStickerCmdDB() {
     try {
         await StickerCmdDB.sync({ alter: true });
+        await loadCache();
         console.log('StickerCmd table ready');
     } catch (error) {
         console.error('Error initializing StickerCmd table:', error);
@@ -63,69 +82,47 @@ async function initStickerCmdDB() {
     }
 }
 
-// Helper to get file path for JSON backup
-function getSessionFile(sessionId = 'main') {
-    return path.join(DATA_DIR, `${sessionId}.json`);
-}
-
-// Get sticker hash from message
 function getStickerHash(stickerMsg) {
     try {
         const fileHash = stickerMsg?.fileSha256;
         if (!fileHash) return null;
-        return Buffer.from(fileHash).toString('hex');
+
+        let buf;
+        if (typeof fileHash === 'string') buf = Buffer.from(fileHash, 'base64');
+        else if (Array.isArray(fileHash?.data)) buf = Buffer.from(fileHash.data);
+        else buf = Buffer.from(fileHash);
+
+        return buf.length ? buf.toString('hex') : null;
     } catch (error) {
         console.error('Error getting sticker hash:', error);
         return null;
     }
 }
 
-// Set sticker command
 async function setStickerCommand(sessionId, stickerHash, command, userId) {
     try {
-        sessionId = sessionId || 'main';
-        
-        // Save to database
-        const [stickerCmd, created] = await StickerCmdDB.findOrCreate({
-            where: { sticker_hash: stickerHash },
-            defaults: {
-                session_id: sessionId,
-                sticker_hash: stickerHash,
-                command: command,
-                set_by: userId,
-                set_at: new Date()
-            }
+        sessionId = sessionId || DEFAULT_SESSION;
+        if (!stickerHash || !command) return false;
+
+        const now = new Date();
+        const existing = await StickerCmdDB.findOne({
+            where: { session_id: sessionId, sticker_hash: stickerHash }
         });
 
-        if (!created) {
-            // Update existing
-            await stickerCmd.update({
-                command: command,
+        let row;
+        if (existing) {
+            row = await existing.update({ command, set_by: userId, set_at: now });
+        } else {
+            row = await StickerCmdDB.create({
+                session_id: sessionId,
+                sticker_hash: stickerHash,
+                command,
                 set_by: userId,
-                set_at: new Date()
+                set_at: now
             });
         }
 
-        // Also save to JSON file as backup
-        try {
-            const filePath = getSessionFile(sessionId);
-            let fileData = {};
-            
-            if (fs.existsSync(filePath)) {
-                fileData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-            }
-            
-            fileData[stickerHash] = {
-                command: command,
-                setBy: userId,
-                setAt: new Date().toISOString()
-            };
-            
-            fs.writeFileSync(filePath, JSON.stringify(fileData, null, 2), 'utf8');
-        } catch (fileError) {
-            console.error('Error saving to JSON backup:', fileError);
-        }
-
+        bucket(sessionId).set(stickerHash, toEntry(row));
         return true;
     } catch (error) {
         console.error('Error saving sticker command:', error);
@@ -133,83 +130,28 @@ async function setStickerCommand(sessionId, stickerHash, command, userId) {
     }
 }
 
-// Get sticker command
 async function getStickerCommand(sessionId, stickerHash) {
     try {
-        sessionId = sessionId || 'main';
-        
-        // Try database first
-        const stickerCmd = await StickerCmdDB.findOne({
-            where: { 
-                session_id: sessionId,
-                sticker_hash: stickerHash 
-            }
-        });
+        sessionId = sessionId || DEFAULT_SESSION;
+        if (!stickerHash) return null;
 
-        if (stickerCmd) {
-            // Update usage count
-            await stickerCmd.update({
-                usage_count: stickerCmd.usage_count + 1,
-                last_used: new Date()
-            });
-            
-            return {
-                command: stickerCmd.command,
-                setBy: stickerCmd.set_by,
-                setAt: stickerCmd.set_at,
-                usageCount: stickerCmd.usage_count
-            };
-        }
-
-        // Fallback to JSON file
-        try {
-            const filePath = getSessionFile(sessionId);
-            if (!fs.existsSync(filePath)) return null;
-            
-            const fileData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-            const fileCmd = fileData[stickerHash];
-            
-            if (fileCmd) {
-                // Sync to database
-                await setStickerCommand(sessionId, stickerHash, fileCmd.command, fileCmd.setBy);
-                return fileCmd;
-            }
-        } catch (fileError) {
-            console.error('Error reading from JSON backup:', fileError);
-        }
-
-        return null;
+        if (!cacheLoaded) await loadCache();
+        return bucket(sessionId).get(stickerHash) || null;
     } catch (error) {
         console.error('Error getting sticker command:', error);
         return null;
     }
 }
 
-// Remove sticker command
 async function removeStickerCommand(sessionId, stickerHash) {
     try {
-        sessionId = sessionId || 'main';
-        
-        // Remove from database
+        sessionId = sessionId || DEFAULT_SESSION;
+        if (!stickerHash) return false;
+
         const deleted = await StickerCmdDB.destroy({
-            where: { 
-                session_id: sessionId,
-                sticker_hash: stickerHash 
-            }
+            where: { session_id: sessionId, sticker_hash: stickerHash }
         });
-
-        // Remove from JSON file
-        try {
-            const filePath = getSessionFile(sessionId);
-            if (fs.existsSync(filePath)) {
-                const fileData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-                delete fileData[stickerHash];
-                fs.writeFileSync(filePath, JSON.stringify(fileData, null, 2), 'utf8');
-            }
-        } catch (fileError) {
-            console.error('Error removing from JSON backup:', fileError);
-        }
-
+        bucket(sessionId).delete(stickerHash);
         return deleted > 0;
     } catch (error) {
         console.error('Error removing sticker command:', error);
@@ -217,85 +159,83 @@ async function removeStickerCommand(sessionId, stickerHash) {
     }
 }
 
-// Get all sticker commands for a user
+async function removeStickerCommandsByName(sessionId, command) {
+    try {
+        sessionId = sessionId || DEFAULT_SESSION;
+        if (!command) return 0;
+
+        const target = String(command).trim().toLowerCase();
+        const rows = await StickerCmdDB.findAll({ where: { session_id: sessionId } });
+        const matches = rows.filter(r => r.command.trim().split(/\s+/)[0].toLowerCase() === target);
+        if (!matches.length) return 0;
+
+        await StickerCmdDB.destroy({
+            where: { session_id: sessionId, sticker_hash: matches.map(r => r.sticker_hash) }
+        });
+        for (const r of matches) bucket(sessionId).delete(r.sticker_hash);
+        return matches.length;
+    } catch (error) {
+        console.error('Error removing sticker commands by name:', error);
+        return 0;
+    }
+}
+
 async function getUserStickerCommands(sessionId, userId) {
     try {
-        sessionId = sessionId || 'main';
-        
-        const commands = await StickerCmdDB.findAll({
-            where: { 
-                session_id: sessionId,
-                set_by: userId 
-            },
+        sessionId = sessionId || DEFAULT_SESSION;
+        const rows = await StickerCmdDB.findAll({
+            where: { session_id: sessionId, set_by: userId },
             order: [['set_at', 'DESC']]
         });
-
-        return commands.map(cmd => ({
-            hash: cmd.sticker_hash,
-            command: cmd.command,
-            setBy: cmd.set_by,
-            setAt: cmd.set_at,
-            usageCount: cmd.usage_count,
-            lastUsed: cmd.last_used
-        }));
+        return rows.map(toEntry);
     } catch (error) {
         console.error('Error getting user sticker commands:', error);
         return [];
     }
 }
 
-// Get all sticker commands (for listing)
 async function getAllStickerCommands(sessionId) {
     try {
-        sessionId = sessionId || 'main';
-        
-        const commands = await StickerCmdDB.findAll({
+        sessionId = sessionId || DEFAULT_SESSION;
+        const rows = await StickerCmdDB.findAll({
             where: { session_id: sessionId },
-            order: [['usage_count', 'DESC']]
+            order: [['usage_count', 'DESC'], ['set_at', 'DESC']]
         });
-
-        return commands.map(cmd => ({
-            hash: cmd.sticker_hash,
-            command: cmd.command,
-            setBy: cmd.set_by,
-            setAt: cmd.set_at,
-            usageCount: cmd.usage_count
-        }));
+        return rows.map(toEntry);
     } catch (error) {
         console.error('Error getting all sticker commands:', error);
         return [];
     }
 }
 
-// Increment usage count
-async function incrementStickerUsage(stickerHash) {
+async function incrementStickerUsage(sessionId, stickerHash) {
     try {
-        const stickerCmd = await StickerCmdDB.findOne({
-            where: { sticker_hash: stickerHash }
-        });
+        sessionId = sessionId || DEFAULT_SESSION;
+        const now = new Date();
 
-        if (stickerCmd) {
-            await stickerCmd.update({
-                usage_count: stickerCmd.usage_count + 1,
-                last_used: new Date()
-            });
+        await StickerCmdDB.update(
+            { usage_count: database.literal('"usage_count" + 1'), last_used: now },
+            { where: { session_id: sessionId, sticker_hash: stickerHash } }
+        );
+
+        const entry = bucket(sessionId).get(stickerHash);
+        if (entry) {
+            entry.usageCount += 1;
+            entry.lastUsed = now;
         }
     } catch (error) {
         console.error('Error incrementing sticker usage:', error);
     }
 }
 
-// Initialize database
-initStickerCmdDB().catch(err => {
-    console.error('❌ Failed to initialize StickerCmd database:', err);
-});
-
 module.exports = {
+    DEFAULT_SESSION,
     initStickerCmdDB,
     getStickerHash,
     setStickerCommand,
     getStickerCommand,
     removeStickerCommand,
+    removeStickerCommandsByName,
     getUserStickerCommands,
     getAllStickerCommands,
     incrementStickerUsage,
